@@ -1,0 +1,67 @@
+.background{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 75px;
+    background-color: rgba(243,243,243,1);
+    overflow: auto;
+    overflow: overlay;
+}
+
+.content{
+    background-color: rgb(255, 255, 255);
+    /*box-shadow: 0 0 5px -2px black;*/
+    min-height: 95%;
+    width: 70%;
+    margin: 10px 15vw;
+}
+
+.article{
+    padding: 5% 10%;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.cutButton{
+    position: fixed;
+    top:50%;
+    left:85vw;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.cutButton:hover{
+    z-index: 100;
+    box-shadow: 0 0 8px -2px black;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #dadada;
+}
+
+.cutBack{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    /*box-shadow: 0 0 5px -2px black;*/
+}
+.cutBack:hover{
+    cursor: pointer;
+}
+
+.cutIcon{
+    width: 40px;
+    height: 40px;
+    transform: rotate(225deg);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.cutIcon:hover{
+    cursor: pointer;
+}

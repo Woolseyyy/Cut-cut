@@ -1,0 +1,106 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    z-index: 100;
+}
+
+.left{
+    height: 100%;
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.right{
+    height: 100%;
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+.toolContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tagContainer{
+    white-space:nowrap;
+    overflow: auto;
+}
+
+
+/*****
+*tag
+****/
+.tagDefault{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    width: 116px;
+    color: rgb(50, 50, 50);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 8px;
+    line-height: 75px;
+    text-align: center;
+    transition: 0.5s;
+    vertical-align: top;
+}
+
+.tagActive{
+    display: inline-block;
+    background-color: rgb(243, 243, 243);
+    height: 75px;
+    width: 116px;
+    color: rgb(50, 50, 50);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 8px;
+    line-height: 75px;
+    text-align: center;
+    transition: 0.5s;
+    vertical-align: top;
+}
+
+.tagHover{
+    display: inline-block;
+    background-color: rgb(243, 243, 243);
+    height: 75px;
+    width: 116px;
+    color: rgb(50, 50, 50);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 8px;
+    line-height: 75px;
+    text-align: center;
+    transition: 0.5s;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+/****
+*right
+**/
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+}

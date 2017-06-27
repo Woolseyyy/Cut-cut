@@ -1,0 +1,45 @@
+.List{
+    background-color: rgb(250, 248, 248);
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.ListItem{
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 3px 3px -3px black;
+    color: rgb(82, 82, 82);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 8px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+.ListItemActive{
+    background-color: rgb(147, 144, 144);
+    box-shadow: 0px 5px 5px -5px rgb(0, 0, 0) inset;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 8px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+.ListItemHover{
+    background-color: #d2d2d2;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 3px 3px -3px black;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 8px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    padding-left: 30px;
+    cursor: pointer;
+}
