@@ -9,6 +9,13 @@ var index = require('./routes/index');
 
 var app = express();
 
+//mongodb
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/trace');
+mongoose.connection.on('error',function(err){
+    console.log(err);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
