@@ -12,14 +12,21 @@ class Article extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            title:"浙江大学举办双一流争霸赛",
-            category:"军事",
-            source:"浙大小字报",
-            date:"2017/6/9"
+            data:{
+                title:"",
+                category:"",
+                source:"",
+                date:new Date(),
+                content:[]
+            }
         };
     }
     componentDidMount(){
-
+        $.get("http://127.0.0.1:3000/article?id="+this.props.location.query.id, function(result){
+            var data = JSON.parse(result).news;
+            data.date = new Date(data.date);
+            this.setState({data:data});
+        }.bind(this));
     }
     render(){
         return(
@@ -28,7 +35,7 @@ class Article extends React.Component{
                 <div className={css.content}>
                     <div className={css.cutButton + " " + css.cutBack}/>
                     <div className={css.article + " " + "typo"}>
-                        <h1>{this.state.title}</h1>
+                        <h1>{this.state.data.title}</h1>
                         <h2 className="serif"
                             style={{
                                 color: "#999",
@@ -37,33 +44,29 @@ class Article extends React.Component{
                                 borderBottom: "3px double #eee"
                             }}
                         >
-                            {this.state.category + "　来源:" + this.state.source + "　" + this.state.date}
+                            {this.state.data.category + "　　来源:"}
+                            <a href={this.state.data.sourceAddress}>{this.state.data.source}</a>
+                            {"　　" + this.state.data.date.getFullYear() + '-' + this.state.data.date.getMonth() + '-' + this.state.data.date.getDate() + "　"
+                                + this.state.data.date.getHours() + ":" + this.state.data.date.getMinutes() + ":" + this.state.data.date.getSeconds()
+                            }
                         </h2>
-                        <ol id="table">
-                            <li><a href="#section1">关于 <i className="serif">Typo.css</i></a></li>
-                            <li><a href="#section2">排版实例</a>
-                                <ul>
-                                    <li><a href="#section2-1">例1：论语学而篇第一</a></li>
-                                    <li><a href="#section2-2">例2：英文排版</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#section3">附录</a>
-                                <ul>
-                                    <li><a href="#appendix1"><i className="serif">Typo.css</i> 排版偏重点</a></li>
-                                    <li><a href="#appendix2">开源许可</a></li>
-                                </ul>
-                            </li>
-                        </ol>
-
-                        <h2 id="section1">一、关于 <i className="serif">Typo.css</i></h2>
-
-                        <p><i className="serif">Typo.css</i> 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。</p>
-                        <h4>现状和如何去做：</h4>
-
-                        <p className="typo-first">排版是一个麻烦的问题 <sup><a href="#appendix1"># 附录一</a></sup>，需要精心设计，而这个设计却是常被视觉设计师所忽略的。前端工程师更常看到这样的问题，但不便变更。因为在多个 OS 中的不同浏览器渲染不同，改动需要多的时间做回归测试，所以改变变得更困难。而像我们一般使用的
-                            Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。<i className="serif">Typo.css</i> 要做的就是解决中文排版的问题。</p>
-
-
+                        {
+                            this.state.data.content.map((item, key)=>{
+                                if(item.type==="text"){
+                                    return(
+                                        <p>{item.data}</p>
+                                    )
+                                }
+                                else if (item.type==="img"){
+                                    return(
+                                        <p><img src={item.src} alt={item.alt}/></p>
+                                    )
+                                }
+                                else{
+                                    return null;
+                                }
+                            })
+                        }
                     </div>
                     <div className={css.cutButton}>
                         <object type="image/svg+xml" data={CutIcon} className={css.cutIcon}/>
