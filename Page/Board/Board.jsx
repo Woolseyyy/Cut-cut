@@ -17,115 +17,13 @@ class Board extends React.Component{
                 title:'推荐',
                 description:'你的心思我来猜'
             },
-            data:[
-                {
-                    _id:0,
-                    title:"吴昊潜满绩了1",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },
-                {
-                    _id:1,
-                    title:"吴昊潜满绩了2",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了3",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了4",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了5",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了6",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了7",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了8",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了9",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                },{
-                    _id:2,
-                    title:"吴昊潜满绩了10",
-                    category:"军事",
-                    source:"浙大学报",
-                    sourceAddress:"'http://cms-bucket.nosdn.127.net",
-                    date:"2017/6/28",
-                    abstract:"吴昊潜满级了好厉害啊我要给他生猴子！生猴子！吴昊潜满级了好厉害啊我要给他生猴子！生猴子！",
-                    author:'吴朝晖',
-                    img:'http://cms-bucket.nosdn.127.net/catchpic/1/11/11099d5e7f8c6b46f890c29d72924e1f.jpg?imageView&thumbnail=550x0'
-                }
-            ]
-
+            data:[]
         };
     }
     componentDidMount(){
-
+        $.get("http://127.0.0.1:3000/list", function(result){
+            this.setState({data:JSON.parse(result).news});
+        }.bind(this));
     }
     render(){
         return(
@@ -532,7 +430,7 @@ class NewsSmall extends React.Component{
         return(
             <div className={css.news}>
                 <div className={css.newsSource}
-                    onClick={()=>{window.open(this.props.sourceAddress)}}
+                     onClick={()=>{window.open(this.props.data.sourceAddress)}}
                 >出自　{this.props.data.source}</div>
                 <div className={css.newsImg} style={imgBack} alt="news image"
                      onClick={()=>{window.location.href="#/article?id="+this.props.data._id}}
@@ -580,7 +478,7 @@ class NewsMiddle extends React.Component{
         return(
             <div className={css.news}>
                 <div className={css.newsSource}
-                     onClick={()=>{window.open(this.props.sourceAddress)}}
+                     onClick={()=>{window.open(this.props.data.sourceAddress)}}
                 >出自　{this.props.data.source}</div>
                 <div className={css.newsImgMiddle} style={imgBack} alt="news image"
                      onClick={()=>{window.location.href="#/article?id="+this.props.data._id}}
@@ -627,7 +525,7 @@ class NewsLarge extends React.Component{
         return(
             <div className={css.news}>
                 <div className={css.newsSource}
-                     onClick={()=>{window.open(this.props.sourceAddress)}}
+                     onClick={()=>{window.open(this.props.data.sourceAddress)}}
                 >出自　{this.props.data.source}</div>
                 <div className={css.newsLarge}
                      onMouseOver={()=>{this.setState({hover:true})}}
@@ -679,7 +577,7 @@ class NewsMobile extends React.Component{
         return(
             <div className={css.news}>
                 <div className={css.newsSource}
-                     onClick={()=>{window.open(this.props.sourceAddress)}}
+                     onClick={()=>{window.open(this.props.data.sourceAddress)}}
                 >出自　{this.props.data.source}</div>
                 <div className={css.newsLargeMobile}
                      onMouseOver={()=>{this.setState({hover:true})}}
