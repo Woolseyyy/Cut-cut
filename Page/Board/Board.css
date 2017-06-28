@@ -1,0 +1,225 @@
+.background{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 75px;
+    background-color: rgba(243,243,243,1);
+    overflow: auto;
+    overflow: overlay;
+}
+
+.area{
+    margin: 30px;
+}
+
+.areaTitle{
+    color: rgb(50, 50, 50);
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+.areaDescription{
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.newsRow{
+    padding: 20px 0;
+    border-top: #d6d6d6 1px solid;
+}
+
+/**************      news    ******************/
+.news{
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+    height:100%;
+}
+
+.newsSource{
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: normal;
+    text-align: left;
+    margin: 5px 0;
+}
+.newsSource:hover{
+    color: #1abc9c;
+    cursor: pointer;
+    transition: linear 0.1s;
+}
+.newsImg{
+    width: auto;
+    height: 180px;
+    background-size:cover;
+    background-position: center center;
+    margin: 10px 0;
+    transition: linear 0.5s;
+}
+.newsImg:hover{
+    cursor: pointer;
+    filter:brightness(120%);
+    transition: linear 0.3s;
+}
+.newsCategory{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-align: left;
+    margin: 5px 0;
+    transition: linear 0.1s;
+}
+.newsCategory:hover{
+    color: #1abc9c;
+    cursor: pointer;
+    transition: linear 0.1s;
+}
+.newsArticle:hover{
+    cursor: pointer;
+}
+.newsTitle{
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: left;
+}
+.newsAuthor{
+    color: rgb(152, 152, 152);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: left;
+}
+.newsAbstract{
+    color: rgb(78, 78, 78);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+.newsImgMiddle{
+    width: auto;
+    height: 240px;
+    background-size:cover;
+    background-position: center center;
+    margin: 10px 0;
+    transition: linear 0.3s;
+}
+.newsImgMiddle:hover{
+    cursor: pointer;
+    filter:brightness(120%);
+    transition: linear 0.3s;
+}
+.newsLarge{
+    width: auto;
+    height: 360px;
+    margin: 10px 0;
+    position: relative;
+}
+.newsLargeMobile{
+    width: auto;
+    height: 180px;
+    margin: 10px 0;
+    position: relative;
+}
+.newsLarge:hover{
+    cursor: pointer;
+}
+.newsImgLarge{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size:cover;
+    background-position: center center;
+    transition: linear 0.3s;
+    filter:brightness(70%);
+}
+
+.newsImgLargeHover{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size:cover;
+    background-position: center center;
+    filter:brightness(60%);
+    transition: linear 0.3s;
+    overflow: hidden;
+}
+.newsArticleLarge{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+.newsTextFront{
+    color: #ffffff;
+}
+.newsArticleLargeMobile{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+.newsTitleMobile{
+    color: #ffffff;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    margin-top: -10px;
+    line-height: 20px;
+    left: 0;
+    right: 0;
+}
+.newsCategoryMobile{
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+
+@media screen and (min-width: 768px){
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        width: 70%;
+        margin: 10px 15vw;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        margin: 10px 5vw;
+    }
+
+}
