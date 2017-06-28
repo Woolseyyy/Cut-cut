@@ -10,8 +10,8 @@ module.exports = mongoose.model('news', new Schema({
     author:String,
     source:String,
     sourceAddress:String,
-    date:String,
+    date:{type: Date, default: Date.now},
     abstract:String,
     img:String,
-    content:[{}]
+    content:[]
 }));
