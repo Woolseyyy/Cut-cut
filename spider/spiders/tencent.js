@@ -32,6 +32,7 @@ var spiderArticle = function(url){
 
                 var content = [];
                 var img = null;
+                var abstract = null;
                 for(var p=0; p<article.length; p++){
 
                     var d = article[p].children[0];
@@ -39,7 +40,10 @@ var spiderArticle = function(url){
                         content.push({
                             type:d.type,
                             data:d.data
-                        })
+                        });
+                        if(abstract===null && d.data!==null){
+                            abstract = d.data.substr(0, 50);
+                        }
                     }
                     else if(d && d.name==='img'){
                         content.push({
@@ -60,7 +64,10 @@ var spiderArticle = function(url){
                     author:author,
                     date: date,
                     img:img,
-                    content:content
+                    content:content,
+                    abstract:abstract,
+                    source:'腾讯新闻',
+                    sourceAddress:url
                 };
                 //console.log(news);
                 update(news);
@@ -88,7 +95,7 @@ var spiderList = function(){
                 '&page=' + i +
                 '&_=' + new Date().getTime(),
                 method:'GET',
-                headers: { // 必选信息, 如果不知道哪些信息是必须的, 建议用抓包工具看一下, 都写上也无妨...
+                headers: {
                     'Content-Type': 'application/json',
                     'Referer':'http://news.qq.com/articleList/rolls/'//反防爬
                 }
@@ -106,7 +113,7 @@ var spiderList = function(){
                 if(datas.response.code==='0'){
                     var articles = datas.data.article_info;
 
-                    for(var j=0; j<3; j++){
+                    for(var j=0; j<articles.length; j++){
                         //console.log(articles[j].url);
                         spiderArticle(articles[j].url);
                     }
