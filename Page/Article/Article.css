@@ -14,54 +14,108 @@
     background-color: rgb(255, 255, 255);
     /*box-shadow: 0 0 5px -2px black;*/
     min-height: 95%;
-    width: 70%;
-    margin: 10px 15vw;
 }
 
-.article{
-    padding: 5% 10%;
-    position: relative;
-    background-color: #ffffff;
-}
-
-.cutButton{
-    position: fixed;
-    top:50%;
-    left:85vw;
-    margin-left: -30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.cutButton:hover{
-    z-index: 100;
-    box-shadow: 0 0 8px -2px black;
-    transition: 0.5s;
-    cursor: pointer;
-    background-color: #dadada;
-}
-
-.cutBack{
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    /*box-shadow: 0 0 5px -2px black;*/
-}
-.cutBack:hover{
-    cursor: pointer;
-}
 
 .cutIcon{
-    width: 40px;
-    height: 40px;
-    transform: rotate(225deg);
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 60px;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
 }
 .cutIcon:hover{
     cursor: pointer;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px){
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        width: 70%;
+        margin: 10px 15vw;
+    }
+
+    .article{
+        padding: 5% 10%;
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    .cutButton{
+        position: fixed;
+        top:50%;
+        left:85vw;
+        margin-left: -30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        transition: 0.5s;
+        text-align: center;
+    }
+
+    .cutButton:hover{
+        z-index: 100;
+        box-shadow: 0 0 8px -2px black;
+        transition: 0.5s;
+        cursor: pointer;
+        background-color: #dadada;
+    }
+
+    .cutBack{
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border-radius: 50%;
+        /*box-shadow: 0 0 5px -2px black;*/
+    }
+    .cutBack:hover{
+        cursor: pointer;
+    }
+    .cutIcon{
+        color: #6d6d6d;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        margin: 0;
+    }
+
+    .article{
+        padding:20px;
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    .cutButton{
+        position: fixed;
+        bottom: 0;
+        left:0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        transition: 0.5s;
+        background-color: #dadada;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .cutBack:hover{
+        cursor: pointer;
+    }
+    .cutIcon{
+        color: #ffffff;
+    }
 }

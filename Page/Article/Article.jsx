@@ -69,7 +69,7 @@ class Article extends React.Component{
                         }
                     </div>
                     <div className={css.cutButton}>
-                        <object type="image/svg+xml" data={CutIcon} className={css.cutIcon}/>
+                        <span className={css.cutIcon}>content_cut</span>
                     </div>
                 </div>
             </div>

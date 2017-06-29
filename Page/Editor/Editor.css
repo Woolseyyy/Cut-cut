@@ -14,18 +14,9 @@
     background-color: rgb(255, 255, 255);
     /*box-shadow: 0 0 5px -2px black;*/
     min-height: 95%;
-    width: 70%;
-    margin: 10px 15vw;
     position: relative;
     padding:40px;
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
 
 .material-icons {
@@ -43,7 +34,6 @@
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     color: #6d6d6d;
-
 }
 
 img{
@@ -56,43 +46,6 @@ img.active{
     overflow: hidden;
 }
 
-.menu{
-    position: fixed;
-    top: 50%;
-    margin-top: -200px;
-    margin-left: -130px;
-    background: #fff;
-    padding: 20px 5px;
-}
-
-.button{
-    display: block;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    transition: 0.2s linear;
-}
-
-.button:hover{
-    background: #6d6d6d;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.button:hover>span{
-    color: #ffffff;
-    transition: 0.2s linear;
-}
-
-.menu-right{
-    position: fixed;
-    top: 50%;
-    margin-top: -40px;
-    margin-left: 40px;
-    background: #fff;
-    padding: 20px 5px;
-    left: 85%;
-}
 
 .title{
     margin-bottom: 20px;
@@ -104,4 +57,92 @@ img.active{
     color: #000000;
     outline:none;
     border-bottom: 2px solid #555555;
+}
+
+@media screen and (min-width: 768px){
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        width: 70%;
+        margin: 10px 15vw;
+    }
+    .menu{
+        position: fixed;
+        top: 50%;
+        margin-top: -200px;
+        margin-left: -130px;
+        background: #fff;
+        padding: 20px 5px;
+    }
+
+    .button{
+        display: block;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        transition: 0.2s linear;
+    }
+
+    .button:hover{
+        background: #6d6d6d;
+        cursor: pointer;
+        transition: 0.2s linear;
+    }
+
+    .button:hover>span{
+        color: #ffffff;
+        transition: 0.2s linear;
+    }
+
+    .menu-right{
+        position: fixed;
+        top: 50%;
+        margin-top: -40px;
+        margin-left: 40px;
+        background: #fff;
+        padding: 20px 5px;
+        left: 85%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        margin: 0;
+        padding-left: 50px;
+    }
+    .menu{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+    }
+
+    .button{
+        display: block;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        transition: 0.2s linear;
+    }
+
+    .button:hover{
+        background: #6d6d6d;
+        cursor: pointer;
+        transition: 0.2s linear;
+    }
+
+    .button:hover>span{
+        color: #ffffff;
+        transition: 0.2s linear;
+    }
+
+    .menu-right{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+    }
+
+
 }
