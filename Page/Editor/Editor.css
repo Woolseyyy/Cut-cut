@@ -16,5 +16,80 @@
     min-height: 95%;
     width: 70%;
     margin: 10px 15vw;
+    position: relative;
+    padding:40px;
+    box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    color: #6d6d6d;
+
+}
+
+img{
+    max-width: 100%;
+    max-height: 20em;
+}
+
+img.active{
+    filter: blur(2px) brightness(120%);
+    overflow: hidden;
+}
+
+.menu{
+    position: fixed;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -130px;
+    background: #fff;
+    padding: 20px 5px;
+}
+
+.button{
+    display: block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    transition: 0.2s linear;
+}
+
+.button:hover{
+    background: #6d6d6d;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.button:hover>span{
+    color: #ffffff;
+    transition: 0.2s linear;
+}
+
+.menu-right{
+    position: fixed;
+    top: 50%;
+    margin-top: -40px;
+    margin-left: 40px;
+    background: #fff;
+    padding: 20px 5px;
+    left: 85%;
+}

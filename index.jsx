@@ -27,7 +27,8 @@ var rootRoute={
         childRoutes:[
             require("./Page/Entry"),
             require("./Page/Article"),
-            require("./Page/Board")
+            require("./Page/Board"),
+            require("./Page/Editor")
         ]
     }]
 };

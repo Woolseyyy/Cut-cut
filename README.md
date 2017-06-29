@@ -7,6 +7,8 @@ A RSS website able to cut and edit articles making collections.(Front End)
 + react
 + react-router
 + pure-css
+###引用插件
++ slate
 
 ## How to run
 构建
