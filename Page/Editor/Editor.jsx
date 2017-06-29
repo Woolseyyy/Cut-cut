@@ -8,11 +8,77 @@ class EditorPage extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            state:initialState
+            id:null,
+            create:false,
+            state:initialState,
+            wait:"",
+            title:""
         };
     }
     componentDidMount(){
-
+        let id = this.props.location.query.id;
+        let create = this.props.location.query.create;
+        if(create==='0'){
+            $.get("http://127.0.0.1:3000/cut?id="+id, (result)=>{
+                result = JSON.parse(result);
+                let cut = result.cut;
+                let state = Raw.deserialize(cut.state);
+                let title = cut.title;
+                this.setState({
+                    state:state,
+                    create:false,
+                    id:id,
+                    title:title});
+            });
+        }
+        else{
+            this.setState({create:true});
+        }
+    }
+    cancel(){
+        history.go(-1);
+    }
+    submit(){
+        this.wait("提交中...");
+        let data = Raw.serialize(this.state.state);
+        if(this.state.create){
+            $.ajax({
+                type: 'POST',
+                url:"http://127.0.0.1:3000/cutCreate",
+                data:JSON.stringify({
+                    data:data,
+                    title:this.state.title
+                }),
+                contentType:"application/json",
+                success: (result) => {
+                    result = JSON.parse(result);
+                    let id = result.body.cut._id;
+                    console.log(result);
+                    window.location.href="#/cutView?id="+id;
+                }
+            });
+        }
+        else{
+            $.ajax({
+                type: 'POST',
+                url:"http://127.0.0.1:3000/cutEdit",
+                data:JSON.stringify({
+                    id:this.state.id,
+                    data:data,
+                    title:this.state.title
+                }),
+                contentType:"application/json",
+                success: (result) => {
+                    result = JSON.parse(result);
+                    let id = result.body.cut._id;
+                    console.log(result);
+                    window.location.href="#/cutView?id="+id;
+                }
+            });
+        }
+    }
+    wait(text){
+        this.setState({wait:text});
     }
 
     hasMark(type) {
@@ -186,8 +252,6 @@ class EditorPage extends React.Component{
             .apply()
     }
 
-
-
     renderToolbar() {
         return (
             <div className={css["menu"]}>
@@ -260,17 +324,29 @@ class EditorPage extends React.Component{
             <div className={css.background}>
                 <Nav/>
                 <div className={css.content}>
+                    <div className={css["title"]}>
+                        <input placeholder="请输入标题" value={this.state.title} type="text"
+                               onChange={(event)=>{
+                                   this.setState({title: event.target.value});
+                               }}
+                               onClick={(event)=>{
+                                   event.target.select();
+                               }}
+
+                        />
+                    </div>
                     {this.renderToolbar()}
                     {this.renderEditor()}
                     <div className={css["menu-right"]}>
-                        <span className={css["button"]} >
+                        <span className={css["button"]} onClick={this.submit.bind(this)}>
                             <span className={css["material-icons"]}>check</span>
                         </span>
-                        <span className={css["button"]}>
+                        <span className={css["button"]} onClick={this.cancel.bind(this)}>
                             <span className={css["material-icons"]}>close</span>
                         </span>
                     </div>
                 </div>
+
             </div>
         )
     }
@@ -361,4 +437,5 @@ const schema = {
             }
         }
     ]
-}
+};
+
