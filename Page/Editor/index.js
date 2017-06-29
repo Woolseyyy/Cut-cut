@@ -5,7 +5,7 @@ module.exports={
     path:'/editor',
     getComponent:function(nextState,cb){
         require.ensure([],function(require){
-            cb(null,require("./Entry.jsx"))
+            cb(null,require("./Editor.jsx"))
         })
     }
 };
