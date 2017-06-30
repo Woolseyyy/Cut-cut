@@ -11,6 +11,8 @@ A RSS website able to cut and edit articles making collections.(Back End)
 + cheerio
 + request
 
+### 依赖
++ phantomjs
 
 ## How to run
 ```
@@ -18,6 +20,7 @@ $ git clone
 ```
 ```
 $ npm install
+download and install phantomjs
 ```
 ```
 $ nodejs bin/www

@@ -1,7 +1,7 @@
 /**
  * Created by admin on 2017/6/28.
  */
-var News = require('../db/news');
+var News = require('../../db/news');
 
 var update = function(news){
     News.findOne({

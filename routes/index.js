@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var spiders = require('../spider/index');
+var spiders = require('../modules/spider/index');
+var screenShoot = require('../modules/screenShoot/screenShoot.js');
 var News = require('../db/news');
 var Cut = require('../db/cut');
-
-
 
 var cors = function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:8080");
@@ -107,5 +106,52 @@ router.post('/cutEdit', function(req,res,next){
     })
 });
 
+router.post('/screenShoot', function(req, res, next){
+    var url = req.body.url;
+    //var url = 'http://blog.csdn.net/sqzhao/article/details/48655979';
+    screenShoot(url, function(err, url){
+        if(err){
+            res.json({
+                code:500,
+                msg:err,
+                body:{}
+            })
+        }
+        else{
+            res.json({
+                code:200,
+                msg:'ok',
+                body:{
+                    url:url
+                }
+            })
+        }
+    });
+});
+
+/*
+router.get('/screenShoot', function(req, res, next){
+    //var url = req.body.url;
+    var url = 'http://wiki.jikexueyuan.com/project/nodejs-guide/file-copy.html';
+    screenShoot(url, function(err, url){
+        if(err){
+            res.json({
+                code:500,
+                msg:err,
+                body:{}
+            })
+        }
+        else{
+            res.json({
+                code:200,
+                msg:'ok',
+                body:{
+                    url:url
+                }
+            })
+        }
+    });
+});
+*/
 
 module.exports = router;
