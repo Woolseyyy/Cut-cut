@@ -28,6 +28,22 @@ class Article extends React.Component{
             this.setState({data:data});
         }.bind(this));
     }
+    cut(){
+        $.ajax({
+            type: 'POST',
+            url:"http://127.0.0.1:3000/screenShoot",
+            data:JSON.stringify({
+                //url:window.location.href
+                url:this.state.data.sourceAddress
+            }),
+            contentType:"application/json",
+            success: (result) => {
+                result = JSON.parse(result);
+                let url = result.body.url;
+                console.log(url);
+            }
+        });
+    }
     render(){
         return(
             <div className={css.background}>
@@ -68,7 +84,7 @@ class Article extends React.Component{
                             })
                         }
                     </div>
-                    <div className={css.cutButton}>
+                    <div className={css.cutButton} onClick={this.cut.bind(this)}>
                         <span className={css.cutIcon}>content_cut</span>
                     </div>
                 </div>
