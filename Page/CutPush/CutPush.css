@@ -1,0 +1,70 @@
+
+.content{
+    min-height: 95%;
+    position: relative;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+@media screen and (min-width: 768px){
+    .background{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: 75px;
+        background-color: rgba(243,243,243,1);
+        overflow: auto;
+        overflow: overlay;
+    }
+    .content{
+        width:60%;
+    }
+    .commentDiv{
+        position: fixed;
+        top: 30%;
+        width: 30%;
+        right: 0;
+        margin: 40px;
+        background: #888888;
+        padding: 40px;
+    }
+    .button{
+        margin-top: 20px;
+        position: relative;
+        right: 0;
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .background{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: 50px;
+        background-color: rgba(243,243,243,1);
+        overflow: auto;
+        overflow: overlay;
+    }
+    .content{
+        /*box-shadow: 0 0 5px -2px black;*/
+        margin: 0;
+    }
+    .button{
+        position: relative;
+        width: 100%!important;
+        height: 40px!important;
+    }
+
+    .commentDiv{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}

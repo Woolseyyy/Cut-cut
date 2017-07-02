@@ -49,7 +49,9 @@ class Button extends React.Component{
             <div style={style}
                  className={css.button + " " + this.props.className}
                  onMouseEnter={this.handleMouseEnter.bind(this)}
-                 onMouseOut={this.handleMouseOut.bind(this)}>
+                 onMouseOut={this.handleMouseOut.bind(this)}
+                 onClick={this.props.click}
+            >
                 {this.props.text}
             </div>
         )

@@ -1,0 +1,19 @@
+.input{
+    background-color: #FFFFFF;
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    color: rgb(90, 90, 90);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: normal;
+    line-height: 1em;
+    margin-top: 0px;
+    opacity: 1;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}

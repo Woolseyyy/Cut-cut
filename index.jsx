@@ -29,7 +29,8 @@ var rootRoute={
             require("./Page/Article"),
             require("./Page/Board"),
             require("./Page/Editor"),
-            require("./Page/CutView")
+            require("./Page/CutView"),
+            require("./Page/CutPush")
         ]
     }]
 };
