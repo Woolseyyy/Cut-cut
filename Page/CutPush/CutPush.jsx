@@ -59,7 +59,7 @@ class CutPush extends React.Component{
                 <Nav/>
                 <div className={css.content}>
                     <Cropper
-                        src="http://localhost:3000/img/aHR0cDovL25ld3MucXEuY29tL2EvMjAxNzA3MDEvMDI0OTA2Lmh0bVNhdCwgMDEgSnVsIDIwMTcgMTY6MzE6MzYgR01U.png"
+                        src={this.state.src}
                         ref="cropper"
                         width={"100%"}
                         fixedRatio={false}

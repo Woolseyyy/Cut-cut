@@ -9,9 +9,12 @@ import SearchIcon from 'material-design-icons/action/svg/production/ic_search_48
 class Nav extends React.Component{
     constructor(props) {
         super(props);
+        let tags = ["推荐"].concat(localStorage.interest.split(','));
+        let selected = tags.indexOf(this.props.selected);
+        selected = (selected===-1)?0:selected;
         this.state = {
-            selected:0,
-            tags:["推荐","军事","娱乐"]
+            selected:selected,
+            tags:tags
         };
     }
     componentDidMount(){
@@ -19,6 +22,8 @@ class Nav extends React.Component{
     }
     handleClick(index){
         this.setState({selected:index});
+        window.location.href = "#/board?id="+this.state.tags[index];
+        history.go(0);
     }
     render(){
 

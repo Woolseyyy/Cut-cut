@@ -38,3 +38,10 @@
     width: 345px;
     margin: 50px 0;
 }
+.a{
+    color: #b7b7b7;
+}
+.a:hover{
+    color: #1abc9c;
+    cursor: pointer;
+}

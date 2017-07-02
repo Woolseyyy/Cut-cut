@@ -19,9 +19,16 @@ class Button extends React.Component{
             height:(this.props.height)?this.props.height:"36px",
             lineHeight:(this.props.height)?this.props.height:"36px"
         };
+        let type=(this.props.type)?this.props.type:'text';
         style = JsonAdd(style, this.props.style);
         return(
-            <input type="text" className={css.input + " " + this.props.className} style={style} placeholder={this.props.placeholder}/>
+            <input type={type}
+                   className={css.input + " " + this.props.className}
+                   style={style}
+                   placeholder={this.props.placeholder}
+                   onChange={this.props.onChange}
+                   onBlur={this.props.onBlur}
+            />
         )
     }
 }

@@ -32,7 +32,7 @@ class List extends React.Component{
             <div style={style} className={css.List + " " + this.props.className}>
                 {this.props.data.map((item, key)=>{
                     return(
-                        <ListItem key={key} text={item} active={this.state.activeState[key]}
+                        <ListItem key={key} index={key} text={item} active={this.state.activeState[key]}
                             onActiveChange={this.handleActiveChange.bind(this)}/>
                     );
                 })}
@@ -95,7 +95,7 @@ class ListItem extends React.Component{
                 onMouseOut={this.handleMouseOut.bind(this)}
                 onClick={()=>{
                     this.setState({active:!this.state.active});
-                    this.props.onActiveChange(this.props.key, !(this.state.active));
+                    this.props.onActiveChange(this.props.index, !(this.state.active));
                 }}>
                 {this.props.text}
             </div>

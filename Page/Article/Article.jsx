@@ -22,11 +22,23 @@ class Article extends React.Component{
         };
     }
     componentDidMount(){
-        $.get("http://127.0.0.1:3000/article?id="+this.props.location.query.id, function(result){
-            var data = JSON.parse(result).news;
-            data.date = new Date(data.date);
-            this.setState({data:data});
-        }.bind(this));
+        $.ajax({
+            type: 'GET',
+            url:"http://127.0.0.1:3000/article?id="+this.props.location.query.id,
+            xhrFields:{
+                withCredentials:true
+            },
+            success: (result) => {
+                var data = JSON.parse(result).news;
+                data.date = new Date(data.date);
+                this.setState({data:data});
+            }
+        });
+        // $.get("http://127.0.0.1:3000/article?id="+this.props.location.query.id, function(result){
+        //     var data = JSON.parse(result).news;
+        //     data.date = new Date(data.date);
+        //     this.setState({data:data});
+        // }.bind(this));
     }
     cut(){
         $.ajax({
@@ -40,7 +52,7 @@ class Article extends React.Component{
             success: (result) => {
                 result = JSON.parse(result);
                 let url = result.body.url;
-                console.log(url);
+                window.location.href = "#/cutPush?src="+url;
             }
         });
     }

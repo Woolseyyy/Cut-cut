@@ -17,18 +17,22 @@ class Board extends React.Component{
                 title:'推荐',
                 description:'你的心思我来猜'
             },
-            data:[]
+            data:[],
+            category:[]
         };
     }
     componentDidMount(){
-        $.get("http://127.0.0.1:3000/list", function(result){
-            this.setState({data:JSON.parse(result).news});
+        this.getList();
+    }
+    getList(){
+        $.get("http://127.0.0.1:3000/list?id="+this.props.location.query.id, function(result){
+            this.setState({data:JSON.parse(result).news, area:JSON.parse(result).area});
         }.bind(this));
     }
     render(){
         return(
             <div className={css.background}>
-                <Nav/>
+                <Nav selected={this.props.location.query.id}/>
                 <div className={css.content}>
                     <div className={css.area}>
                         <div  className={css.areaTitle}>{this.state.area.title}</div>
