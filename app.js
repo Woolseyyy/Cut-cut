@@ -73,6 +73,7 @@ app.use(function(err, req, res, next) {
 });
 
 //spider
+spiders();
 setInterval(spiders, 3600 * 1000);
 
 module.exports = app;
