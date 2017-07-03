@@ -13,5 +13,6 @@ module.exports = mongoose.model('news', new Schema({
     date:{type: Date, default: Date.now},
     abstract:String,
     img:String,
-    content:[]
+    content:[],
+    click:Number
 }));

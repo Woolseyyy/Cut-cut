@@ -4,9 +4,10 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 var Schema = mongoose.Schema;
-module.exports = mongoose.model('cut', new Schema({
-    state:{},
-    title:String,
-    author: String,
-    date:{type:Date, default:new Date()}
+module.exports = mongoose.model('user', new Schema({
+    username:String,
+    password:String,
+    email:String,
+    interest:[],
+    cuts:[]
 }));

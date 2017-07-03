@@ -7,6 +7,7 @@ var iconv = require('iconv-lite');
 var http = require('http');
 
 var update = require('../update');
+var Category = require(('../../../db/category.js'));
 
 var spiderArticle = function(url){
     request.get({url:url, encoding:null}, function(error, response, body) {
@@ -16,7 +17,7 @@ var spiderArticle = function(url){
                 html = iconv.encode(html, 'utf8');
                 var $ = cheerio.load(html, {decodeEntities: false});
                 var title = $('.hd').children()[0].children[0].data;
-                var category = $('.a_catalog').children()[0].children[0].data;
+                var category = Category.transform($('.a_catalog').children()[0].children[0].data);
                 var article = $('#Cnt-Main-Article-QQ').children();
 
                 var dateStrArray = $('.a_time')[0].children[0].data.split(/-|\s+|:/);
@@ -69,7 +70,7 @@ var spiderArticle = function(url){
                     source:'腾讯新闻',
                     sourceAddress:url
                 };
-                //console.log(news);
+                if(news.category===null){console.log(news);}
                 update(news);
             }
             catch (err){

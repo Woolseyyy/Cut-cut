@@ -10,23 +10,6 @@ module.exports = function (url, next) {
     var name = new Buffer(url+new Date().toUTCString());
     name = name.toString('base64');
 
-    /*const spawn = require('child_process').spawn;
-    var child = spawn('phantomjs', ['modules/screenShoot/phantomjs-script.js', url, name]);
-    child.stdout.on('exit', function(code){
-        console.log(code);
-        if(code==='ok'){
-            var is = fs.createReadStream('./temp/'+name+'.png');
-            var os = fs.createWriteStream('../../public/img/'+name+'.png');
-            var newUrl = "public/img/"+name+'.png';
-            util.pump(is, os, function() {
-                fs.unlinkSync('modules/screenShoot/temp'+name+'.png');
-                next(null, newUrl);
-            });
-
-        }
-    });*/
-
-
     var phantomjs = require('phantomjs-prebuilt');
     var program = phantomjs.exec('modules/screenShoot/phantomjs-script.js', url, name);
     program.stdout.pipe(process.stdout);
