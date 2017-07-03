@@ -30,7 +30,8 @@ var rootRoute={
             require("./Page/Board"),
             require("./Page/Editor"),
             require("./Page/CutView"),
-            require("./Page/CutPush")
+            require("./Page/CutPush"),
+            require("./Page/Profile")
         ]
     }]
 };

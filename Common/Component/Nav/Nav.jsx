@@ -42,8 +42,8 @@ class Nav extends React.Component{
                     <div className={css.right}>
                         <div className={css.toolContainer}>
                             <embed src={SearchIcon} className={css.icon}/>
-                            <embed src={CollectionIcon} className={css.icon}/>
-                            <img src={require("./static/text_avatar.jpg")} className={css.avatar}/>
+                            <embed src={CollectionIcon} className={css.icon} onClick={()=>window.location.href="#/profile"}/>
+                            <img src={require("./static/text_avatar.jpg")} className={css.avatar}onClick={()=>window.location.href="#/profile"}/>
                         </div>
                     </div>
                 </div>

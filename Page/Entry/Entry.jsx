@@ -144,6 +144,7 @@ class SignForm extends React.Component{
         let user = this.state.user;
         let password = this.state.password;
         let confirm = this.state.confirm;
+        let email = this.state.email;
         if(password===confirm){
             $.ajax({
                 type: 'POST',
@@ -154,7 +155,8 @@ class SignForm extends React.Component{
                 crossDomain: true,
                 data:JSON.stringify({
                     user:user,
-                    password:password
+                    password:password,
+                    email:email
                 }),
                 contentType:"application/json",
                 success: (result) => {

@@ -207,7 +207,14 @@
         margin: 0 20px;
     }
 
+    .avatar:hover{
+        cursor: pointer;
+    }
+
     .icon{
         display: none;
+    }
+    .icon:hover{
+        cursor: pointer;
     }
 }
